@@ -58,9 +58,10 @@ const CarrouselTatto = () => {
         rtl={false}
         shouldResetAutoplay
         showDots={false}
-        sliderClass=""
+        sliderClass="mi-carousel"
         slidesToSlide={1}
         swipeable
+        
       >
         <div className="carrousel-hijo bg-slate-400">Item 1</div>
         <div className="carrousel-hijo bg-slate-400">Item 1</div>

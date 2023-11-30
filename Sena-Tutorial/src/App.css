@@ -1,7 +1,7 @@
 :root {
   font-family: 'Crimson Text', serif;
-font-family: 'Libre Baskerville', serif;
-font-family: 'Marcellus SC', serif;
+  font-family: 'Libre Baskerville', serif;
+  font-family: 'Marcellus SC', serif;
 }
 
 
@@ -16,42 +16,62 @@ body {
 
 
 @keyframes transitionDiv {
-  from{
-opacity: 0;
+  from {
+    opacity: 0;
   }
+
   to {
-opacity: 1;
+    opacity: 1;
   }
 }
-#contenedor-sombra {
-animation: fadeInn linear both ;
-animation-timeline: view();
-transition: all 0.5s ease-out;
 
-animation-range: entry 20%  cover 30%;
+#contenedor-sombra {
+  animation: fadeInn linear both;
+  animation-timeline: view();
+  transition: all 0.5s ease-out;
+
+  animation-range: entry 20% cover 30%;
 
 
 }
+
 @keyframes fadeInn {
   from {
     opacity: 0;
     translate: 0 100px;
-  }to{
-opacity: 1;
-translate: 0 0;
+  }
+
+  to {
+    opacity: 1;
+    translate: 0 0;
   }
 }
 
 
 /* estilos del footer */
 .contenedor-Footer {
-
+  background-position: bottom 50px right 100px;
   height: 400px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr ;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 .carrousel-hijo {
-  width: 400px ;
+  width: 400px;
   height: 400px;
+
+}
+
+
+.mi-carousel {
+  animation: fadeInn linear both;
+  animation-timeline: view();
+  transition: all 0.5s ease-in-out;
+  animation-range: entry 20% cover 30%;
+}
+
+
+.contenedor-seccion-intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
