@@ -1,6 +1,57 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+:root {
+  font-family: 'Crimson Text', serif;
+font-family: 'Libre Baskerville', serif;
+font-family: 'Marcellus SC', serif;
+}
+
+
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+
+@keyframes transitionDiv {
+  from{
+opacity: 0;
+  }
+  to {
+opacity: 1;
+  }
+}
+#contenedor-sombra {
+animation: fadeInn linear both ;
+animation-timeline: view();
+transition: all 0.5s ease-out;
+
+animation-range: entry 20%  cover 30%;
+
+
+}
+@keyframes fadeInn {
+  from {
+    opacity: 0;
+    translate: 0 100px;
+  }to{
+opacity: 1;
+translate: 0 0;
+  }
+}
+
+
+/* estilos del footer */
+.contenedor-Footer {
+
+  height: 400px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr ;
+}
+
+.carrousel-hijo {
+  width: 400px ;
+  height: 400px;
 }
