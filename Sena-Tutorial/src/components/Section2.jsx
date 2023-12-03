@@ -1,13 +1,10 @@
-import React from "react";
-
-
+import "../App.css";
 const Section2 = () => {
-
   return (
-   <div className="h-96 bg-parallax bg-cover bg-fixed">
-
-    <p className="text-white">carro</p>
-   </div>
+    <div className="contenedor-seccion-intro p-9 m-10 h-screen">
+      <div className=" text-white">uno</div>
+      <div className="text-white">dos</div>
+    </div>
   );
 };
 

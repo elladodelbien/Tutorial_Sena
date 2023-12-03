@@ -11,24 +11,24 @@ const Layout = () => {
   return (
     // esta es la parte del codigo fija que se usara con navbar en todas las paginas de la web
     // div principal de navegacion
-    <div className="md:flex flex-wrap w-screen bg-black ">
-      <div className="bg-artisttattoTatto bg-cover    bg-fixed h-auto w-screen ">
+    <div className="md:flex flex-wrap bg-artisttattoTatto  bg-cover h-screen   bg-fixed w-screen  ">
+      <div className=" h-auto     w-screen ">
         <header
           id=""
-          className="z-40 w-screen  text-white bg-transparent  h-14 md:flex md:justify-between items-center p-6"
+          className="z-40 w-screen  text-white   h-14 md:flex md:justify-between items-center p-6"
         >
-          <div className="">
+          <div className=" p-7 text-4xl">
             <p>Logo</p>
           </div>
           <nav className="hidden md:block ">
-            <ul>
+            <ul className="text-2xl">
               <Link
                 to={"/"}
-                className={`${pn === "/" ? "text-white" : "text-red-500"}`}
+                className={`${pn === "/" ? "text-red-500" : "text-white"}`}
               >
                 Home
               </Link>
-              <Link to={"informacion"} className="m-5 text-">
+              <Link to={"informacion"} className="m-5  ">
                 Información
               </Link>
               <Link className="m-5">Contacto</Link>
@@ -37,8 +37,8 @@ const Layout = () => {
         </header>
 
         {/* contenedor de cada una de las paginas */}
-        <div className="flex-grow flex flex-col justify-between">
-          <main className="flex-grow w-full md:flex flex-wrap justify-center m-1 bg-transparent">
+        <div className="flex-grow  flex flex-col justify-between">
+          <main className="flex-grow  w-full md:flex flex-wrap justify-center m-1  ">
             <Outlet />
           </main>
         
