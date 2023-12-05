@@ -144,3 +144,9 @@ body {
     /* Ajusta según tus preferencias */
   }
 }
+
+
+.img-carousel {
+  width: 300px;
+  height: 300px;
+}

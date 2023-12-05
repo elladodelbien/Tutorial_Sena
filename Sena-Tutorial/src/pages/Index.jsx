@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Section from "../components/Section";
 import Section2 from "../components/Section2";
 import tatto from "/tatto-001.jpg";
@@ -11,6 +11,9 @@ const Index = () => {
   const [foticos,setFoticos] = useState([])
   // curl -H "PyL2QUGh9Li2KAE5RkjFSxBfqLB6dXrr1KkIK3qJxnbTtXdOFbInt2ZL"\
   // "https://api.pexels.com/v1/search?query=people"
+useEffect(() => {
+  ObtenerFotos()
+ }, [])
 
   async function ObtenerFotos() {
     try {
@@ -19,7 +22,7 @@ const Index = () => {
         {
           headers: {
             Authorization:
-              " PyL2QUGh9Li2KAE5RkjFSxBfqLB6dXrr1KkIK3qJxnbTtXdOFbInt2ZL",
+              "PyL2QUGh9Li2KAE5RkjFSxBfqLB6dXrr1KkIK3qJxnbTtXdOFbInt2ZL",
           },
         }
       );
@@ -27,39 +30,46 @@ const Index = () => {
         throw new Error("error en la solicitud");
       }
       const Fotos = await respuesta.json() ;
-      
-      return  setFoticos(Fotos.photos)
+      const fg = []
+      for (let i  = 0; i  < 4; i ++) {
+      fg.push(Fotos.photos[i].src.medium)
+        
+      }
+     return setFoticos( fg )
+     
     } catch (error) {
       console.error("Error:", error.message);
     }
   }
-  ObtenerFotos()
- 
- 
+ console.log(foticos[2])
   return (
     <>
       <div className="md:w-11/12 w-full   text-center  h-screen">
         <Section titulo={titulo} />
+         
 
         {/* carrousel */}
-        <div className="mi-carousel ">
-          <CarrouselTatto />
+        <div className="mi-carousel m-1 ">
+          <CarrouselTatto 
+          imagen={foticos}
+
+          />
         </div>
 
         <div
           id="contenedor-sombra"
-          className="md:m-3 m-2 p-8 block md:flex md:flex-col flex-wrap  justify-center  h-screen rounded-xl "
+          className="md:m-1  m-1 p-2 block md:flex md:flex-col flex-wrap  justify-center  h-auto rounded-xl "
         >
-          <div className="contenedor-seccion-intro block md:grid  md:grid-cols-2 md:gap-1 h-screen p-4">
-            <div className=" ">
-              <h1 className="text-5xl font-bold  text-white">
+          <div className="contenedor-seccion-intro   block md:grid  md:grid-cols-2 md:gap-1 md:h-screen h-auto p-4">
+            <div className=" md:flex md:items-center md:flex-col">
+              <h1 className="text-5xl font-bold h-32 md:p-5 text-white">
                 Como se hace un tatuaje?
               </h1>
               <p className="md:m-5 text-p text-white text-center lg:text-xl md:text-base text-sm p-1 whitespace-normal">
                 En <span className="text-2xl">Cueva Store</span>, nos apasiona
-                el arte del tatuaje y estamos aquí para guiarte en el
-                emocionante viaje de crear y llevar contigo o crear una obra de
-                arte única en tu piel. Nuestro objetivo es proporcionar
+                el arte del tatuaje y vamos a guiarte en el
+                emocionante viaje de crear  una obra de
+                arte única en la piel. Nuestro objetivo es proporcionar
                 información detallada y consejos prácticos para ayudarte a tomar
                 decisiones informadas antes, durante y después de tu experiencia
                 con el tatuaje.
@@ -70,7 +80,8 @@ const Index = () => {
             </div>
           </div>
         </div>
-        <Section2 />
+        <Section2
+        itemFoticos={foticos[1]} />
 
         <Footter />
       </div>

@@ -12,7 +12,7 @@ const Layout = () => {
     // esta es la parte del codigo fija que se usara con navbar en todas las paginas de la web
     // div principal de navegacion
     <div className="md:flex flex-wrap bg-artisttattoTatto  bg-cover h-screen   bg-fixed w-screen  ">
-      <div className=" h-auto     w-screen ">
+      <div className=" h-auto  first-letter: w-screen ">
         <header
           id=""
           className="z-40 w-screen  text-white   h-14 md:flex md:justify-between items-center p-6"

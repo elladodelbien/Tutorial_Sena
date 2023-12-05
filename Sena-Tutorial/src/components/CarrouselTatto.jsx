@@ -3,9 +3,12 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import "../App.css";
 
+const CarrouselTatto = ({   imagen  }) => {
 
+  const path1 = imagen[0]
+  const path2 = imagen[1]
+  const path3 = imagen[2]
 
-const CarrouselTatto = () => {
   return (
     <>
       <Carousel
@@ -20,7 +23,7 @@ const CarrouselTatto = () => {
         draggable
         focusOnSelect={false}
         infinite
-        itemClass=""
+        itemClass="img-carousel"
         keyBoardControl
         minimumTouchDrag={80}
         pauseOnHover
@@ -61,13 +64,20 @@ const CarrouselTatto = () => {
         sliderClass="mi-carousel"
         slidesToSlide={1}
         swipeable
-        
       >
-        <div className="carrousel-hijo bg-slate-400">Item 1</div>
-        <div className="carrousel-hijo bg-slate-400">Item 1</div>
-        <div className="carrousel-hijo bg-slate-400">Item 1</div>
-        <div className="carrousel-hijo bg-slate-400">Item 1</div>
-       
+        <div className="carrousel-hijo   bg-slate-400">
+          <h1>imgs</h1>
+          <img className="w-96 h-64 p-5 ml-2  " src={path3} alt="" sizes="imagen de un tatto" />
+        </div>
+        <div className="carrousel-hijo bg-slate-400">
+          <h1>tiene medidas</h1>
+          <img className="w-96 h-64 p-5 ml-2  "   src={ path2} alt="" sizes="imagen de un tatto" />
+          {/* url("/torre.jpg") */}
+        </div>
+        <div className="carrousel-hijo     bg-slate-400">
+          <h1>imgs</h1>
+          <img className="w-96 h-64 p-5 ml-2  "  src={ path1} alt="" sizes="imagen de un tatto" />
+        </div>
       </Carousel>
       ;
     </>
