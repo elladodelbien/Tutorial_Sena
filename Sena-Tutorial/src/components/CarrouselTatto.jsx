@@ -1,13 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import "../App.css";
+import paperMario from "../assets/paperMario.jpg";
 
-const CarrouselTatto = ({   imagen  }) => {
+useState;
+const CarrouselTatto = ({ imagen }) => {
+  const Nramdom = Math.round(Math.random() * 10);
+  const path1 = imagen[Math.round(Math.random() * 10)];
+  const path2 = imagen[Math.round(Math.random() * 10)];
+  const path3 = imagen[Math.round(Math.random() * 10)];
+  const [errorImagen, setErrorImagen] = useState(false);
 
-  const path1 = imagen[0]
-  const path2 = imagen[1]
-  const path3 = imagen[2]
+  const manejarError = () => {
+    setErrorImagen(true);
+  };
 
   return (
     <>
@@ -67,16 +74,37 @@ const CarrouselTatto = ({   imagen  }) => {
       >
         <div className="carrousel-hijo   bg-slate-400">
           <h1>imgs</h1>
-          <img className="w-96 h-64 p-5 ml-2  " src={path3} alt="" sizes="imagen de un tatto" />
+
+          <img
+            className="w-96 h-64 p-5 ml-2  "
+            onError={manejarError}
+            src={path2}
+            alt="imagen de un tatuaje"
+            sizes="imagen de un tatto"
+          />
         </div>
         <div className="carrousel-hijo bg-slate-400">
-          <h1>tiene medidas</h1>
-          <img className="w-96 h-64 p-5 ml-2  "   src={ path2} alt="" sizes="imagen de un tatto" />
-          {/* url("/torre.jpg") */}
+          <h1>Mira estos tatuajes :</h1>
+
+          <img
+            className="w-96 h-64 p-5 ml-2"
+            onError={manejarError}
+            src={path3}
+            alt=""
+            sizes="imagen de un tatto"
+          />
+
+          {/* <img className="w-96 h-64 p-5 ml-2 "  src={ path2} alt="" sizes="imagen de un tatto" /> */}
         </div>
         <div className="carrousel-hijo     bg-slate-400">
-          <h1>imgs</h1>
-          <img className="w-96 h-64 p-5 ml-2  "  src={ path1} alt="" sizes="imagen de un tatto" />
+          <h1>tattos</h1>
+          <img
+            className="w-96 h-64 p-5 ml-2  "
+            onError={manejarError}
+            src={errorImagen ? paperMario : path1}
+            alt=""
+            sizes="imagen de un tatto"
+          />
         </div>
       </Carousel>
       ;

@@ -5,10 +5,15 @@ import tatto from "/tatto-001.jpg";
 import DivSombra from "../components/DivSombra";
 import Footter from "../components/Footter";
 import CarrouselTatto from "../components/CarrouselTatto";
+import Loader from "../components/Loader";
+
+ 
 
 const Index = () => {
   const [titulo, setTitulo] = useState("BIENVENIDO");
+  const Nramdom = Math.round(Math.random()*10)
   const [foticos,setFoticos] = useState([])
+  const [loading, setLoading] = useState(true);
   // curl -H "PyL2QUGh9Li2KAE5RkjFSxBfqLB6dXrr1KkIK3qJxnbTtXdOFbInt2ZL"\
   // "https://api.pexels.com/v1/search?query=people"
 useEffect(() => {
@@ -18,7 +23,7 @@ useEffect(() => {
   async function ObtenerFotos() {
     try {
       const respuesta = await fetch(
-        "https://api.pexels.com/v1/search?query=people",
+        "https://api.pexels.com/v1/search?query=tatto&orientation=landscape",
         {
           headers: {
             Authorization:
@@ -31,30 +36,42 @@ useEffect(() => {
       }
       const Fotos = await respuesta.json() ;
       const fg = []
-      for (let i  = 0; i  < 4; i ++) {
+      for (let i  = 0; i  < Fotos.photos.length; i ++) {
       fg.push(Fotos.photos[i].src.medium)
         
       }
-     return setFoticos( fg )
+      setFoticos( fg )
+     return setLoading(false)
      
     } catch (error) {
       console.error("Error:", error.message);
     }
   }
- console.log(foticos[2])
+ console.log(Nramdom)
   return (
     <>
       <div className="md:w-11/12 w-full   text-center  h-screen">
         <Section titulo={titulo} />
-         
+         {/* precargador de la pagina */}
 
-        {/* carrousel */}
+         {loading ? (
+        <Loader />
+      ) : (
+        // Contenido del carrousel
+
         <div className="mi-carousel m-1 ">
           <CarrouselTatto 
-          imagen={foticos}
+          imagen={foticos   }
 
           />
         </div>
+      )}
+
+
+
+
+
+        
 
         <div
           id="contenedor-sombra"
@@ -81,7 +98,7 @@ useEffect(() => {
           </div>
         </div>
         <Section2
-        itemFoticos={foticos[1]} />
+        itemFoticos={foticos[Nramdom ]} />
 
         <Footter />
       </div>
