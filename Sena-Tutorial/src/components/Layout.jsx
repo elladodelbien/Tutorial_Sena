@@ -11,7 +11,7 @@ const Layout = () => {
   return (
     // esta es la parte del codigo fija que se usara con navbar en todas las paginas de la web
     // div principal de navegacion
-    <div className="md:flex flex-wrap bg-artisttattoTatto  bg-cover h-screen   bg-fixed w-screen  ">
+    <div className={ `md:flex flex-wrap ${pn == "/informacion"  ? "bg-galaxy " : "bg-artisttattoTatto" }    bg-cover h-screen   bg-fixed w-screen`}>
       <div className=" h-auto  first-letter: w-screen ">
         <header
           id=""

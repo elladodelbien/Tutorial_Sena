@@ -4,13 +4,16 @@ import "react-multi-carousel/lib/styles.css";
 import "../App.css";
 import paperMario from "../assets/paperMario.jpg";
 
-useState;
+ 
 const CarrouselTatto = ({ imagen }) => {
   const Nramdom = Math.round(Math.random() * 10);
   const path1 = imagen[Math.round(Math.random() * 10)];
   const path2 = imagen[Math.round(Math.random() * 10)];
   const path3 = imagen[Math.round(Math.random() * 10)];
   const [errorImagen, setErrorImagen] = useState(false);
+  const [paper,setPaper] = useState(path2)
+  const [paper1,setPaper1] = useState(path1)
+  const [paper3,setPaper3] = useState(path3)
 
   const manejarError = () => {
     setErrorImagen(true);
@@ -73,14 +76,16 @@ const CarrouselTatto = ({ imagen }) => {
         swipeable
       >
         <div className="carrousel-hijo   bg-slate-400">
-          <h1>imgs</h1>
+          <h1>Tatuajes</h1>
 
           <img
             className="w-96 h-64 p-5 ml-2  "
-            onError={manejarError}
+            onError={()=>{
+              setPaper(paperMario)
+            }}
             src={path2}
             alt="imagen de un tatuaje"
-            sizes="imagen de un tatto"
+           
           />
         </div>
         <div className="carrousel-hijo bg-slate-400">
@@ -88,10 +93,12 @@ const CarrouselTatto = ({ imagen }) => {
 
           <img
             className="w-96 h-64 p-5 ml-2"
-            onError={manejarError}
+            onError={()=>{
+              setPaper1(paperMario)
+            }}
             src={path3}
-            alt=""
-            sizes="imagen de un tatto"
+            alt="imagen de un tatuaje"
+           
           />
 
           {/* <img className="w-96 h-64 p-5 ml-2 "  src={ path2} alt="" sizes="imagen de un tatto" /> */}
@@ -100,10 +107,12 @@ const CarrouselTatto = ({ imagen }) => {
           <h1>tattos</h1>
           <img
             className="w-96 h-64 p-5 ml-2  "
-            onError={manejarError}
-            src={errorImagen ? paperMario : path1}
-            alt=""
-            sizes="imagen de un tatto"
+            onError={()=>{
+              setPaper3(paperMario)
+            }}
+            src={paper3}
+            alt="imagen de un tatuaje"
+            
           />
         </div>
       </Carousel>

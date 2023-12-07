@@ -11,7 +11,10 @@ export default {
         'parallaxDos': 'url("/isla.jpg")',
         'parallaxTres': 'url("/paisaje-1.png")',
         'womanTatto':'url("/woman-tatto.jpg")',
-        'artisttattoTatto':'url("/artistTatto.jpg")'
+        'artisttattoTatto':'url("/artistTatto.jpg")',
+        "montains":'url("/montains.jpg")',
+        "fairy":'url("/fairy.jpg")',
+        "galaxy":'url("/space-galaxy.jpg")'
        
 
         

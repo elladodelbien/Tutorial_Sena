@@ -7,6 +7,7 @@ import Draggable from "react-draggable";
 const Section2 = ({ itemFoticos }) => {
   const [lista, setLista] = useState(true);
   const [lista1, setLista1] = useState(true);
+  const [lista2, setLista2] = useState(true);
   const [isPopoverOpen, setIsPopoverOpen] = useState(false);
   const [isPopoverOpenDos, setIsPopoverOpenDos] = useState(false);
   const [isMobile,setIsMobile] = useState(null)
@@ -38,10 +39,10 @@ const Section2 = ({ itemFoticos }) => {
   };
 
   return (
-    <div className="contenedor-seccion-intro md:grid block md:grid-cols-2 p-9 m-10 h-auto">
-      <div className="   text-white">
+    <div className="contenedor-seccion-intro md:grid block md:grid-cols-2 p-2 m-4  h-auto">
+      <div className=" md:m-5 p-5  text-white">
         <img
-          className="w-100 h-96"
+          className=  "w-full h-96 object-cover" 
           src={itemFoticos}
           alt="La imagen obtenida en pexels"
         />
@@ -54,15 +55,15 @@ const Section2 = ({ itemFoticos }) => {
               <button
                 value={lista}
                 onClick={() => toggleLista(setLista)}
-                className="bg-white w-full m-2 hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow"
+                className="bg-white w-full m-2   hover:bg-gray-400 transition-all delay-150 text-gray-800 font-semibold py-2 px-4 border border-gray-400  rounded shadow"
               >
                 paso 1
               </button>
-              <div className={`text-2xl ${lista ? "hidden" : "block"}`} >
+              <div className={`text-xl ${lista ? "hidden" : "block"} w-full m-2 bg-slate-500 p-2`} >
                 <p  >
                   El primer paso es fundamental, y es escoger el diseño ya que
                   como todo buen comienzo de un proyecto grande es necesario
-                  contar con un plan, una guia traze el camino para la correcta
+                  contar con un plan, una guia que traze el camino para la correcta
                   elaboracion en este caso del tatuaje.
                 </p>
                 {/*/////////////////////////// inicio modal con video iframe /////////////////////////// */}
@@ -78,12 +79,13 @@ const Section2 = ({ itemFoticos }) => {
                     { position, nudgedLeft, nudgedTop } // you can also provide a render function that injects some useful stuff!
                   ) => (
                     <Draggable>
-                      <div className="text-white flex flex-col   font-semibold justify-between w-auto h-autorounded-lg p-7 bg-stone-600">
-                        <div>
+                      <div className="text-white flex flex-col text-xl  justify-between w-auto h-autorounded-lg p-7 bg-stone-500">
+                        <p className="p-3">
                           Mira este video donde se eplica como colocar un stencil!!!:
                           
                           <br />  
-                        </div>
+                        </p>
+                      
                         <iframe
                           width="676"
                           // height="383"
@@ -95,6 +97,9 @@ const Section2 = ({ itemFoticos }) => {
                           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                           allowfullscreen
                         ></iframe>
+                          <p className="text-sm">
+                          Puedes arrastrar este elemento
+                        </p>
                         {/* boton cerrar popover aunque la libreria permite cerrar tambien al dar click fuera */}
                           <div className="w-full pt-5 flex justify-center">
                           <button
@@ -113,7 +118,7 @@ const Section2 = ({ itemFoticos }) => {
                     className="bg-blue-600  transition-all  hover:scale-105  hover:bg-indigo-400 rounded-md w-1/3 h-5/6"
                     onClick={() => setIsPopoverOpen(!isPopoverOpen)}
                   >
-                    Click me!
+                    Mira este video practico!!
                   </button>
                 </Popover>
                 {/* fin del modal iframe */}
@@ -126,38 +131,49 @@ const Section2 = ({ itemFoticos }) => {
               <button
                 value={lista1}
                 onClick={() => toggleLista(setLista1)}
-                className="bg-white w-full m-2 hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow"
+                className="bg-white w-full m-2 hover:bg-gray-400 transition-all delay-150 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow"
               >
                 paso 2
               </button>
               {/* inicio del segundo modal */}
-             
+             <Draggable>
               <div   className={`text-2xl ${lista1 ? "hidden" : "block"} w-full m-2 transition ease-in-out delay-150 hover:scale-105 h-auto rounded-lg p-3 bg-slate-500`} >
           
-              <p className={`text-2xl ${lista1 ? "hidden" : "block"}`}>
+              <p className={`text-xl ${lista1 ? "hidden" : "block"}`}>
                 Una vez colocado el stencil y <br />teniendo a tu cliente en una posicion comoda es hora de poner manos a la obra !! <br /> ---LITERAL---
               </p>
-              <div className="iframe-dos w-full  ">
+              <div className="iframe-dos w-full  flex justify-center ">
                 <iframe
-                className=" "
+                className=""
                 src="https://www.youtube.com/embed/WH14jNeUi80" 
                 frameborder="0"
                 width= {isMobile ? "200" : "470"}
-                height= {isMobile ? "200" : "250"}>     
+                height= {isMobile ? "200" : "250"}>    
+                allowfullscreen 
 
                 </iframe>
                 
               </div>
               {/* popover dos */}
               
-              </div>     
+              </div>    
+              </Draggable>
+            
 
                  
              
             </li>
-            <li>paso 2</li>
-            <li>paso 3</li>
-            <li>paso 4</li>
+            <li>
+            <button
+                value={lista2}
+                onClick={() => toggleLista(setLista2)}
+                className="bg-white w-full m-2 hover:bg-gray-400 transition-all delay-150 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow"
+              >
+                paso 3
+              </button>
+
+            </li>
+          
           </ul>
         </div>
       </div>

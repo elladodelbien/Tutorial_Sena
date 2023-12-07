@@ -14,6 +14,7 @@ const Index = () => {
   const Nramdom = Math.round(Math.random()*10)
   const [foticos,setFoticos] = useState([])
   const [loading, setLoading] = useState(true);
+  document.body.style.overflow = 'auto';
   // curl -H "PyL2QUGh9Li2KAE5RkjFSxBfqLB6dXrr1KkIK3qJxnbTtXdOFbInt2ZL"\
   // "https://api.pexels.com/v1/search?query=people"
 useEffect(() => {
