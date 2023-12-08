@@ -46,14 +46,15 @@ const Layout = () => {
         >
           <div className=" md:p-7 text-2xl">
             <p className="md:block hidden">Logo</p>
-            <button onClick={handleMenu} className="md:hidden block">Menu</button>
+            <button onClick={handleMenu} className="md:hidden bg-menu bg-cover w-10 h-10 m-2 block">menu</button>
+             
           </div>
           <nav className="translate-x-0    md:block ">
             {/* <ul className="md:text-2xl text-xl md:block md:relative absolute   bg-slate-500  "> */}
             <ul className={`md:text-2xl text-xl md:block ${isMobile && !verMenu ? "Ocultarmenu" : ""}     md:relative absolute  ${verMenu ? "flex  menu   flex-col" : "  flex  flex-col  "}  bg-slate-500  `}>
               <Link
                 to={"/"} 
-                className={`${pn === "/" ? "text-red-500" : "text-white"} m-5`}
+                className={`${pn === "/" ? "text-amber-200" : "text-white"} m-5`}
               >
                 Home
               </Link>

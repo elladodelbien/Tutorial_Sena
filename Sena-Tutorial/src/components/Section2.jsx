@@ -64,7 +64,7 @@ const Section2 = ({ itemFoticos }) => {
                   El primer paso es fundamental, y es escoger el diseño ya que
                   como todo buen comienzo de un proyecto grande es necesario
                   contar con un plan, una guia que traze el camino para la correcta
-                  elaboracion en este caso del tatuaje.
+                  elaboracion de cualquier proyecto en este caso del tatuaje.
                 </p>
                 {/*/////////////////////////// inicio modal con video iframe /////////////////////////// */}
 
@@ -140,12 +140,14 @@ const Section2 = ({ itemFoticos }) => {
               <div   className={`text-2xl ${lista1 ? "hidden" : "block"} w-full m-2 transition ease-in-out delay-150 hover:scale-105 h-auto rounded-lg p-3 bg-slate-500`} >
           
               <p className={`text-xl ${lista1 ? "hidden" : "block"}`}>
-                Una vez colocado el stencil y <br />teniendo a tu cliente en una posicion comoda es hora de poner manos a la obra !! <br /> ---LITERAL---
+                Una vez colocado el stencil y <br />teniendo a tu cliente en una posicion comoda es hora de poner manos a la obra !!  <br /> ---LITERAL--- <br />
+                hey!! pero no tan rapido practica primero en piel sintetica para que aprendas a manejar las profundidades de la aguja movimientos de la mano, tecnicas dependiendo el tatuaje <br />
+                y mucho mas pero mejor te dejo un video para que entiendas mejor a lo que me refiero.
               </p>
               <div className="iframe-dos w-full  flex justify-center ">
                 <iframe
                 className=""
-                src="https://www.youtube.com/embed/WH14jNeUi80" 
+                src="https://www.youtube.com/embed/ot5_z9Ri1-c" title="Aprender a tatuar desde 0 | Capítulo 3 | Sombreados, tinta blanca y más!" 
                 frameborder="0"
                 width= {isMobile ? "200" : "470"}
                 height= {isMobile ? "200" : "250"}>    
@@ -171,6 +173,31 @@ const Section2 = ({ itemFoticos }) => {
               >
                 paso 3
               </button>
+              <Draggable>
+              <div   className={`text-2xl ${lista2 ? "hidden" : "block"} w-full m-2 transition ease-in-out delay-150 hover:scale-105 h-auto rounded-lg p-3 bg-slate-500`} >
+          
+              <p className={`text-xl ${lista2 ? "hidden" : "block"}`}>
+                recuerda es muy importante que siempre estas muy al pendiente de la limpieza y correcto uso de las maquinas, los elementos agujas y demas 
+                evitando siempre la contaminacion cruzada la cual puede complicar la sanacion del cliente <br />
+                ademas de poder afectar la salud de el. <br /> <br /> <br /> ---LITERAL---
+              </p>
+              <div className="iframe-dos w-full  flex justify-center ">
+                <iframe
+                className=""
+                src="https://www.youtube.com/embed/jQsASwgnEkk" title="LIMPIEZA EN EL PROCESO DEL TATUAJE + TIPS DE LIMPIEZA CURSO DE TATUAJES GRATIS #7"
+                frameborder="0"
+                width= {isMobile ? "200" : "470"}
+                height= {isMobile ? "200" : "250"}>    
+                allowfullscreen 
+
+                </iframe>
+                
+              </div>
+              {/* popover dos */}
+              
+              </div>    
+              </Draggable>
+            
 
             </li>
           
@@ -182,3 +209,7 @@ const Section2 = ({ itemFoticos }) => {
 };
 
 export default Section2;
+ 
+
+
+ 

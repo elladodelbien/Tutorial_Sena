@@ -14,7 +14,9 @@ export default {
         'artisttattoTatto':'url("/artistTatto.jpg")',
         "montains":'url("/montains.jpg")',
         "fairy":'url("/fairy.jpg")',
-        "galaxy":'url("/space-galaxy.jpg")'
+        "galaxy":'url("/space-galaxy.jpg")',
+        "menu":'url("/menus.png")'
+
        
 
         

@@ -13,7 +13,7 @@ const Informacion = () => {
   return (
     <>
       <div id="container-information" className="w-screen  file: h-full">
-        <div id="carouse-paper-mario" className=" md:absolute md:mx-52 mx-20 my-72 md:my-44    h-auto">
+        <div id="carouse-paper-mario" className=" md:absolute md:mx-52 mx-20 my-72 md:my-44  h-auto">
           <Carousel
             additionalTransfrom={0}
             autoPlay
