@@ -2,8 +2,8 @@
   font-family: 'Crimson Text', serif;
   font-family: 'Libre Baskerville', serif;
   font-family: 'Marcellus SC', serif;
-  
-  background-image: linear-gradient( 111.4deg,  rgba(7,7,9,1) 6.5%, rgba(27,24,113,1) 93.2% );
+
+  background-image: linear-gradient(111.4deg, rgba(7, 7, 9, 1) 6.5%, rgba(27, 24, 113, 1) 93.2%);
 }
 
 
@@ -12,8 +12,8 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
- overflow-x: hidden;
- width: 100% !important;
+  overflow-x: hidden;
+  width: 100% !important;
   height: 100% !important;
 
 }
@@ -59,7 +59,7 @@ body {
 /* estilos del footer */
 .contenedor-Footer {
   background-position: bottom 50px right 100px;
- 
+
 }
 
 .carrousel-hijo {
@@ -80,7 +80,7 @@ body {
 .contenedor-seccion-intro {
   /* display: grid; */
   /* grid-template-columns: 1fr 1fr; */
- 
+
   border-radius: 30px;
   background: #212121;
   box-shadow: 15px 15px 30px rgb(25, 25, 25),
@@ -125,7 +125,7 @@ body {
 
 
 .FFTER {
- 
+
   animation: blury;
   transition: all 2s ease-in;
 }
@@ -133,13 +133,13 @@ body {
 
 @keyframes blury {
   0% {
-   
+
     opacity: 0;
   }
- 
+
 
   100% {
-   
+
     opacity: 1;
     /* Ajusta según tus preferencias */
   }
@@ -150,41 +150,83 @@ body {
   width: 300px;
   height: 300px;
 }
- 
 
- .random-div {
+
+.random-div {
   width: 25px;
   height: 25px;
   background-color: #8799a5;
-   border-radius: 50%;
-margin: 100px;
+  border-radius: 50%;
+  margin: 100px;
   --random: 1;
   position: absolute;
   z-index: 9999;
   animation: scaleOpacity 30s infinite alternate ease-in-out;
-  
- }
- @keyframes scaleOpacity {
+
+}
+
+@keyframes scaleOpacity {
   0% {
     opacity: 0.5;
     transform: scale(1) translate(0, -50);
   }
+
   25% {
     opacity: 0.8;
     transform: scale(1.2) translate(calc((5vw + 50px) * var(--random)), calc((50vh + 50px) * var(--random)));
   }
+
   50% {
     opacity: 1;
     transform: scale(1) translate(calc((100vw - 20px) * var(--random)), calc((100vh - 50px) * var(--random)));
-  
+
   }
-  75%{
+
+  75% {
     opacity: 0.5;
     transform: scale(1) translate(calc((0vw - 120px) * var(--random)), calc((100vh + 150px) * var(--random)));
-  
+
   }
+
   100% {
     opacity: 0;
     transform: scale(1) translate(0, -50);
   }
+}
+
+.menu {
+
+
+  animation: Displaymenu 3s both ;
+
+}
+
+.Ocultarmenu {
+
+
+  animation: Ocultarmenu 3s forwards cubic-bezier(0.075, 0.82, 0.165, 1);
+
+}
+
+@keyframes Displaymenu {
+  0% {
+    transform: translate(-160px, 0px);
+  }
+
+  100% {
+    transform: translate(0px, 0px);
+  }
+
+}
+
+@keyframes Ocultarmenu {
+  0% {
+    transform: translate(0px, 0px);
+  }
+
+  100% {
+
+    transform: translate(-160px, 0px);
+  }
+
 }
