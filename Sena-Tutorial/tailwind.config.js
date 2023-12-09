@@ -15,7 +15,12 @@ export default {
         "montains":'url("/montains.jpg")',
         "fairy":'url("/fairy.jpg")',
         "galaxy":'url("/space-galaxy.jpg")',
-        "menu":'url("/menus.png")'
+        "menu":'url("/menus.png")',
+        "italo":'url("/italo-tatto.jpeg")',        
+        "arlo":'url("/arlo-tatoos.jpg")',
+        "papper":'url("/Mario.jpg")'
+
+
 
        
 

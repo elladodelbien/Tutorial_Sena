@@ -74,12 +74,12 @@ body {
   animation-timeline: view();
   transition: all 0.5s ease-in-out;
   animation-range: entry 20% cover 30%;
+ 
 }
 
 
 .contenedor-seccion-intro {
-  /* display: grid; */
-  /* grid-template-columns: 1fr 1fr; */
+ 
 
   border-radius: 30px;
   background: #212121;
@@ -147,7 +147,7 @@ body {
 
 
 .img-carousel {
-  width: 300px;
+  width: 400px;
   height: 300px;
 }
 
@@ -197,24 +197,26 @@ body {
 .menu {
 
 
-  animation: Displaymenu 3s both ;
+  animation: Displaymenu 1s linear  ;
 
 }
 
 .Ocultarmenu {
 
-
-  animation: Ocultarmenu 3s forwards cubic-bezier(0.075, 0.82, 0.165, 1);
-
+   
+  animation: Ocultarmenu 3s forwards   ;
+   
 }
 
 @keyframes Displaymenu {
   0% {
     transform: translate(-160px, 0px);
+    
   }
 
   100% {
     transform: translate(0px, 0px);
+     
   }
 
 }
@@ -229,4 +231,18 @@ body {
     transform: translate(-160px, 0px);
   }
 
+}
+ 
+
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 24px;
+}
+.carousel-imformation {
+   width: 200px;
+height: 300px;
 }
