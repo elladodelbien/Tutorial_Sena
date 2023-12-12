@@ -14,26 +14,31 @@ const Informacion = () => {
 
   return (
     <>
-      <div id="container-information"  className="md:w-screen w-80  h-screen">
+      <div id="container-information" className="md:w-screen w-80    h-screen">
         <div
           id="carouse-paper-mario"
-          className=" md:absolute md:mx-52    md:my-44  "
+          className=" md:absolute md:mx-52 my-48  pl-5 md:my-44  "
         >
-          <div className="  mx-16 ">
-            <Link to={"/"} className="m-2 p-1 rounded-lg  bg-indigo-600">
+          <div className="  md:mx-96 w-full pl-3    absolute -my-44 mx-48 ">
+            <Link
+              to={"/"}
+              className="m-2 p-1 rounded-lg text-white md:text-xl transition duration-150 hover:bg-indigo-400  bg-indigo-600"
+            >
               Go Home
             </Link>
           </div>
-          <h1 className="text-white bg-gray-700 text-center font-bold text-xl">
+          <h1 className="text-white bg-gray-70 backdrop-blur-2 shadow-white shadow-2xl text-center font-bold md:text-2xl text-xl">
             Estilos de tatuajes
           </h1>
-          <p className="text-white text-center text-xs m-5">
-            Existen gran variedad de tatuajes y asi mismo de estilos, los cuales  
-            cuentan con artistas de talla mundial,  
-            los cuales realizan trabajos extraordinarios
+          <div className="backdrop-blur-sm relative">
+          <p className="text-white z-50  text-center text-sm m-5">
+            Existen gran variedad de tatuajes y asi mismo de estilos, los cuales
+            cuentan con artistas de talla mundial, los cuales realizan trabajos
+            extraordinarios
           </p>
+          </div>
+       
           <Carousel
-         
             additionalTransfrom={0}
             autoPlay
             arrows
@@ -95,13 +100,13 @@ const Informacion = () => {
             </div>
             <div className=" bg-fixed  mx-1   bg-arlo bg-cover  h-auto">
               <h1 className="text-white bg-slate-500 text-lg text-center">
-                Estilo de tatuaje   surealista
+                Estilo de tatuaje surealista
               </h1>
               <div className=" carousel-imformation    "></div>
             </div>
             <div className=" bg-fixed  mx-1 bg-papper bg-cover  h-auto">
               <h1 className="text-white text-xl bg-slate-500 text-center">
-                Estilo de tatuaje  cartoon
+                Estilo de tatuaje cartoon
               </h1>
               <div className=" carousel-imformation    "></div>
             </div>

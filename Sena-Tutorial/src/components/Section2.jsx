@@ -93,7 +93,7 @@ const Section2 = ({ itemFoticos }) => {
                           height="383"
                           src="https://www.youtube.com/embed/WH14jNeUi80"
                           title="🔥8. ASI SE HACE UN TRANSFER para tatuar - A mano- Aprendiendo a tatuar - tattoo - tutorial"
-                          frameborder="0"
+                         
                           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                           allowfullscreen
                         ></iframe>
@@ -148,7 +148,7 @@ const Section2 = ({ itemFoticos }) => {
                 <iframe
                 className=""
                 src="https://www.youtube.com/embed/ot5_z9Ri1-c" title="Aprender a tatuar desde 0 | Capítulo 3 | Sombreados, tinta blanca y más!" 
-                frameborder="0"
+                 
                 width= {isMobile ? "200" : "470"}
                 height= {isMobile ? "200" : "250"}>    
                 allowfullscreen 
@@ -185,7 +185,7 @@ const Section2 = ({ itemFoticos }) => {
                 <iframe
                 className=""
                 src="https://www.youtube.com/embed/jQsASwgnEkk" title="LIMPIEZA EN EL PROCESO DEL TATUAJE + TIPS DE LIMPIEZA CURSO DE TATUAJES GRATIS #7"
-                frameborder="0"
+               
                 width= {isMobile ? "200" : "470"}
                 height= {isMobile ? "200" : "250"}>    
                 allowfullscreen 

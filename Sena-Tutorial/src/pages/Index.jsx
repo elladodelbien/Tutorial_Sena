@@ -87,13 +87,7 @@ useEffect(() => {
           />
         </div>
       )}
-
-
-
-
-
-        
-
+   
         <div
           id="contenedor-sombra"
           className="md:m-1  m-1 p-2 block md:flex md:flex-col flex-wrap  justify-center  h-auto rounded-xl "
@@ -113,8 +107,8 @@ useEffect(() => {
                 con el tatuaje.
               </p>
             </div>
-            <div className="m-5 img-animate  flex items-center">
-              <img width={290}  className="p-5" height={100} src={tatto} alt="la imagen de un tatuaje"   />
+            <div className="m-5 img-animate justify-center flex items-center">
+              <img width={isMobile ? 290 : 500}  className="p-5" height={100} src={tatto} alt="la imagen de un tatuaje"   />
             </div>
           </div>
         </div>
