@@ -1,7 +1,7 @@
 import { useState, useEffect} from "react";
 import "../App.css";
 import { Popover } from "react-tiny-popover";
-import Draggable from "react-draggable";
+ 
  
 
 const Section2 = ({ itemFoticos }) => {
@@ -136,7 +136,7 @@ const Section2 = ({ itemFoticos }) => {
                 paso 2
               </button>
               {/* inicio del segundo modal */}
-             <Draggable>
+             
               <div   className={`text-2xl ${lista1 ? "hidden" : "block"} w-full m-2 transition ease-in-out delay-150 hover:scale-105 h-auto rounded-lg p-3 bg-slate-500`} >
           
               <p className={`text-xl ${lista1 ? "hidden" : "block"}`}>
@@ -159,7 +159,7 @@ const Section2 = ({ itemFoticos }) => {
               {/* popover dos */}
               
               </div>    
-              </Draggable>
+     
             
 
                  
@@ -173,7 +173,7 @@ const Section2 = ({ itemFoticos }) => {
               >
                 paso 3
               </button>
-              <Draggable>
+             
               <div   className={`text-2xl ${lista2 ? "hidden" : "block"} w-full m-2 transition ease-in-out delay-150 hover:scale-105 h-auto rounded-lg p-3 bg-slate-500`} >
           
               <p className={`text-xl ${lista2 ? "hidden" : "block"}`}>
@@ -196,7 +196,7 @@ const Section2 = ({ itemFoticos }) => {
               {/* popover dos */}
               
               </div>    
-              </Draggable>
+         
             
 
             </li>

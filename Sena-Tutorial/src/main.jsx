@@ -23,17 +23,17 @@ const router = createBrowserRouter([
         index:true,
         element:<Index />
       },
-      {
-        path:"informacion",
-        element:<Informacion />
-      }
+      // {
+      //   path:"informacion",
+      //   element:<Informacion />
+      // }
 
     ]
   },
-  // {
-  //   path:"informacion",
-  //   element:<Informacion />
-  // }
+  {
+    path:"informacion",
+    element:<Informacion />
+  }
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(

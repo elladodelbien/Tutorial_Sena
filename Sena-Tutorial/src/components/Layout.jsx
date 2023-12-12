@@ -1,4 +1,4 @@
- 
+  
 import { useRef, useState,useEffect } from "react";
 import { Outlet, useLocation, Link } from "react-router-dom";
 import Footter from "./Footter";
@@ -49,14 +49,14 @@ const Layout = () => {
      {isLoading ? (  <Loader /> ) 
      :
      (
-      <div className=" h-auto  first-letter: w-screen ">
+      <div className=" h-auto  md:w-screen  ">
       <header
         id=""
         className="z-40 w-screen  text-white    h-14 md:flex md:justify-between items-center p-1 md:p-6"
       >
-        <div className=" md:p-7 text-2xl">
+        <div className="ml-10 md:p-7 text-xl">
           <p className="md:block hidden">Logo</p>
-          <button onClick={handleMenu} className="md:hidden bg-menu bg-cover w-10 h-10 m-2 block">menu</button>
+          <button onClick={handleMenu} className="md:hidden   bg-cover w-10 h-10 m-2 block">menu</button>
            
         </div>
         <nav className={` ${verMenu ? "" : "hidden"}    md:block `}>

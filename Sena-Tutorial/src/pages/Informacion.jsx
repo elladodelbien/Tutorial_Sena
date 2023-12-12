@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
-import InformacionSection from "../components/InformacionSection";
+
 import { generarDivsAleatorios } from "../AuxiliaresJavascript/GenerarDiv.js";
 import "../../styles.css";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import paperMario from "../assets/paperMario.jpg";
+import { Link } from "react-router-dom";
 
 const Informacion = () => {
   useEffect(() => {
@@ -13,16 +14,26 @@ const Informacion = () => {
 
   return (
     <>
-      <div id="container-information" className="w-screen   h-full">
+      <div id="container-information"  className="md:w-screen w-80  h-screen">
         <div
           id="carouse-paper-mario"
-          className=" md:absolute md:mx-52 mx-20 my-72 md:my-44  h-auto"
-         
+          className=" md:absolute md:mx-52    md:my-44  "
         >
-          <p className="text-white">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse quam, dolorem eos recusandae cupidita non.
+          <div className="  mx-16 ">
+            <Link to={"/"} className="m-2 p-1 rounded-lg  bg-indigo-600">
+              Go Home
+            </Link>
+          </div>
+          <h1 className="text-white bg-gray-700 text-center font-bold text-xl">
+            Estilos de tatuajes
+          </h1>
+          <p className="text-white text-center text-xs m-5">
+            Existen gran variedad de tatuajes y asi mismo de estilos, los cuales  
+            cuentan con artistas de talla mundial,  
+            los cuales realizan trabajos extraordinarios
           </p>
           <Carousel
+         
             additionalTransfrom={0}
             autoPlay
             arrows
@@ -77,24 +88,23 @@ const Informacion = () => {
             swipeable
           >
             <div className="bg-fixed mx-1  bg-italo bg-cover  h-auto">
-              <h1 className="text-white text-xl text-center">Estilo de tatuae realista</h1>
-              <div className=" carousel-imformation    ">
-                
-              </div>
+              <h1 className="text-white bg-slate-500  text-xl text-center">
+                Estilo de tatuae realista
+              </h1>
+              <div className=" carousel-imformation    "></div>
             </div>
             <div className=" bg-fixed  mx-1   bg-arlo bg-cover  h-auto">
-              <h1 className="text-white text-xl text-center">Estilo de tatuae realista</h1>
-              <div className=" carousel-imformation    ">
-                
-              </div>
+              <h1 className="text-white bg-slate-500 text-lg text-center">
+                Estilo de tatuaje   surealista
+              </h1>
+              <div className=" carousel-imformation    "></div>
             </div>
             <div className=" bg-fixed  mx-1 bg-papper bg-cover  h-auto">
-              <h1 className="text-white text-xl text-center">Estilo de tatuae realista</h1>
-              <div className=" carousel-imformation    ">
-                
-              </div>
+              <h1 className="text-white text-xl bg-slate-500 text-center">
+                Estilo de tatuaje  cartoon
+              </h1>
+              <div className=" carousel-imformation    "></div>
             </div>
-             
 
             {/* <div className="w-72 bg-papper bg-cover flex flex-col-reverse h-56">
              <p className="text-white shadow-xl  text-stroke font-bold md:text-xl   text-center">tatuaje estilo cartoon</p>

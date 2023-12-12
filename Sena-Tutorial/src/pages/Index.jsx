@@ -14,11 +14,31 @@ const Index = () => {
   const Nramdom = Math.round(Math.random()*10)
   const [foticos,setFoticos] = useState([])
   const [loading, setLoading] = useState(true);
+  const [isMobile,setIsMobile] = useState(null)
+  const [isLoading, setIsLoading] = useState(true);
   document.body.style.overflow = 'auto';
   // curl -H "PyL2QUGh9Li2KAE5RkjFSxBfqLB6dXrr1KkIK3qJxnbTtXdOFbInt2ZL"\
   // "https://api.pexels.com/v1/search?query=people"
 useEffect(() => {
   ObtenerFotos()
+  const verificarAnchoPantalla = () => {
+    const anchoPantalla = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+    setIsMobile(anchoPantalla < 550);
+  };
+
+  // Verificar el ancho de la pantalla al cargar la página
+  verificarAnchoPantalla();
+
+  // Agregar un listener para verificar el ancho de la pantalla cuando cambie
+  window.addEventListener('resize', verificarAnchoPantalla);
+
+  // Limpiar el listener cuando el componente se desmonta
+  return () => {
+    window.removeEventListener('resize', verificarAnchoPantalla);
+  };
  }, [])
 
   async function ObtenerFotos() {
@@ -79,11 +99,11 @@ useEffect(() => {
           className="md:m-1  m-1 p-2 block md:flex md:flex-col flex-wrap  justify-center  h-auto rounded-xl "
         >
           <div className="contenedor-seccion-intro   block md:grid  md:grid-cols-2 md:gap-1 md:h-screen h-auto p-4">
-            <div className=" md:flex md:items-center md:flex-col">
+            <div className=" md:flex md:items-center   md:flex-col">
               <h1 className="text-5xl font-bold h-32 md:p-5 text-white">
                 Como se hace un tatuaje?
               </h1>
-              <p className="md:m-5 text-p text-white text-center lg:text-xl md:text-base text-sm p-1 whitespace-normal">
+              <p className="md:m-5  text-white m-10 text-center lg:text-xl md:text-base text-sm p-1 whitespace-normal">
                 En <span className="text-2xl">Cueva Store</span>, nos apasiona
                 el arte del tatuaje y vamos a guiarte en el
                 emocionante viaje de crear  una obra de
@@ -94,7 +114,7 @@ useEffect(() => {
               </p>
             </div>
             <div className="m-5 img-animate  flex items-center">
-              <img src={tatto} alt="la imagen de un tatuaje"   />
+              <img width={290}  className="p-5" height={100} src={tatto} alt="la imagen de un tatuaje"   />
             </div>
           </div>
         </div>

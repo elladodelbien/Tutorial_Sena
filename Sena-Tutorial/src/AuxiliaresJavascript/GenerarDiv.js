@@ -1,3 +1,7 @@
+import React, { useState } from "react";
+
+ 
+
 export function generarDivsAleatorios(cantidad) {
     // for (let i = 0; i < cantidad; i++) {
     //   // Crea un nuevo div
@@ -41,3 +45,4 @@ export function generarDivsAleatorios(cantidad) {
     document.body.style.overflowX = 'hidden';
 }
 
+ 
