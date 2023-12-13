@@ -17,10 +17,10 @@ const Informacion = () => {
       <div id="container-information" className="md:w-screen w-80    h-screen">
         <div
           id="carouse-paper-mario"
-          className=" md:absolute md:mx-52 my-36  pl-5 md:my-44  "
+          className=" md:absolute md:mx-52 my-28  pl-5 md:my-44  "
         >
           {/* contenedor del boton */}
-          <div className="  md:mx-96 w-full pl-3 md:-my-10    absolute -my-32 mx-36 ">
+          <div className="  md:mx-96 w-full pl-3 md:-my-10    absolute -my-16 mx-36 ">
             <Link
               to={"/"}
               className="m-2 p-1 rounded-lg text-white md:text-xl transition duration-150 hover:bg-indigo-400  bg-indigo-600"

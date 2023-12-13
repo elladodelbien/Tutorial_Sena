@@ -44,7 +44,7 @@ const Layout = () => {
     // esta es la parte del codigo fija que se usara con navbar en todas las paginas de la web
     // div principal de navegacion
 
-    <div className={ `md:flex flex-wrap ${pn == "/informacion"  ? "bg-galaxy " : "bg-artisttattoTatto" }    bg-cover h-screen   bg-fixed w-screen`}>
+    <div className={ `md:flex flex-wrap ${pn == "/informacion"  ? "bg-galaxy   overflow-y-hidden" : "bg-artisttattoTatto" }    bg-cover h-screen   bg-fixed w-screen`}>
      {/* contenido de la pagina */}
      {isLoading ? (  <Loader /> ) 
      :
