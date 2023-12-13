@@ -20,7 +20,7 @@ const Informacion = () => {
           className=" md:absolute md:mx-52 my-36  pl-5 md:my-44  "
         >
           {/* contenedor del boton */}
-          <div className="  md:mx-96 w-full pl-3    absolute -my-32 mx-36 ">
+          <div className="  md:mx-96 w-full pl-3 md:-my-10    absolute -my-32 mx-36 ">
             <Link
               to={"/"}
               className="m-2 p-1 rounded-lg text-white md:text-xl transition duration-150 hover:bg-indigo-400  bg-indigo-600"
@@ -34,7 +34,7 @@ const Informacion = () => {
           <div className="backdrop-blur-sm relative">
           <p className="text-white z-50  text-center text-sm m-5">
             Existen gran variedad de tatuajes y asi mismo de estilos, los cuales
-            cuentan con artistas de talla mundial, los cuales realizan trabajos
+            cuentan con artistas de talla mundial que realizan trabajos
             extraordinarios
           </p>
           </div>
@@ -93,19 +93,19 @@ const Informacion = () => {
             slidesToSlide={1}
             swipeable
           >
-            <div className="bg-fixed mx-1  bg-italo bg-cover  h-auto">
+            <div className="bg-fixed mx-1 bg-right  bg-italo bg-cover  h-auto">
               <h1 className="text-white bg-slate-500  text-xl text-center">
                 Estilo de tatuae realista
               </h1>
               <div className=" carousel-imformation    "></div>
             </div>
-            <div className=" bg-fixed  mx-1   bg-arlo bg-cover  h-auto">
+            <div className=" bg-fixed  mx-1 bg-center   bg-arlo bg-cover  h-auto">
               <h1 className="text-white bg-slate-500 text-lg text-center">
                 Estilo de tatuaje surealista
               </h1>
               <div className=" carousel-imformation    "></div>
             </div>
-            <div className=" bg-fixed  mx-1 bg-papper bg-cover  h-auto">
+            <div className=" bg-fixed  mx-1 bg-center  bg-papper bg-cover  h-auto">
               <h1 className="text-white text-xl bg-slate-500 text-center">
                 Estilo de tatuaje cartoon
               </h1>

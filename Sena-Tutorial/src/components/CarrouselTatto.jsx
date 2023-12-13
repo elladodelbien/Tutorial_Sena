@@ -79,7 +79,7 @@ const CarrouselTatto = ({ imagen }) => {
           <h1>Tatuajes</h1>
 
           <img
-            className="w-96 h-64 p-5 ml-2  "
+            className="w-96 h-64 bg-center p-5 ml-2  "
             onError={()=>{
               setPaper(paperMario)
             }}

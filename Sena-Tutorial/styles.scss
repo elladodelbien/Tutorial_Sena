@@ -1,6 +1,6 @@
 @use "sass:math";
 #container-information {
-  transition: ease-in 1s;
+  transition: transform ease-in 1s;
   display: flex;
   justify-content: center;
   margin-top: -5%;
@@ -28,7 +28,7 @@
   $particleColor: hsl(255, 69%, 40%);
 
   position: absolute;
-  transform: translateY(-10vh);
+  transform: translateY(-5vh);
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 
@@ -43,7 +43,7 @@
       hsla(180, 100%, 80%, 0) 56%
     );
 
-    animation: fadein-frames 200ms infinite, scale-frames 2s infinite;
+    animation: fade-frames 200ms infinite, scale-frames 2s infinite;
 
     @keyframes fade-frames {
       0% {
@@ -82,6 +82,7 @@
       height: $circleSize;
 
       $startPositionY: random(10) + 100;
+      
       $framesName: "move-frames-" + $i;
       $moveDuration: 35000 + random(15000) + ms;
 
@@ -92,16 +93,18 @@
       @keyframes #{$framesName} {
         from {
           transform: translate3d(
-            #{random(100) + vw},
+            #{random(500) + vw},
             #{$startPositionY + vh},
+        
             0
           );
         }
 
         to {
           transform: translate3d(
-            #{random(100) + vw},
-            #{- $startPositionY - random(30) + vh},
+            #{random(90) - vw},
+            #{- $startPositionY - random(50) + vh},
+            
             0
           );
         }
