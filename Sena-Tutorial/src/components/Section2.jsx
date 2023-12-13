@@ -78,7 +78,7 @@ const Section2 = ({ itemFoticos }) => {
                   content={(
                     { position, nudgedLeft, nudgedTop } // you can also provide a render function that injects some useful stuff!
                   ) => (
-                    <Draggable>
+                    
                       <div className="text-white flex flex-col text-xl  justify-between w-auto h-autorounded-lg p-7 bg-stone-500">
                         <p className="p-3">
                           Mira este video donde se eplica como colocar un stencil!!!:
@@ -111,7 +111,7 @@ const Section2 = ({ itemFoticos }) => {
                           </div>
                     
                       </div>
-                    </Draggable>
+                    
                   )}
                 >
                   <button

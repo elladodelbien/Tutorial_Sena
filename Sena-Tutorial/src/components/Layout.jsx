@@ -61,7 +61,7 @@ const Layout = () => {
         </div>
         <nav className={` ${verMenu ? "" : "hidden"}    md:block `}>
           {/* <ul className="md:text-2xl text-xl md:block md:relative absolute   bg-slate-500  "> */}
-          <ul className={`md:text-2xl text-xl md:block ${isMobile && verMenu ? "  bg-slate-500   " : ""}     md:relative absolute  ${verMenu ? "flex  menu  flex-col" : " flex flex-col"} transition-transform    `}>
+          <ul className={`md:text-2xl text-xl md:block ${isMobile && verMenu ? " bg-slate-500 " : ""} z-50    md:relative absolute  ${verMenu ? "flex  menu  flex-col" : " flex flex-col"} transition-transform    `}>
             <Link
               to={"/"} 
               className={`${pn === "/" ? "text-amber-200" : "text-white"} m-5`}

@@ -17,9 +17,10 @@ const Informacion = () => {
       <div id="container-information" className="md:w-screen w-80    h-screen">
         <div
           id="carouse-paper-mario"
-          className=" md:absolute md:mx-52 my-48  pl-5 md:my-44  "
+          className=" md:absolute md:mx-52 my-36  pl-5 md:my-44  "
         >
-          <div className="  md:mx-96 w-full pl-3    absolute -my-44 mx-48 ">
+          {/* contenedor del boton */}
+          <div className="  md:mx-96 w-full pl-3    absolute -my-32 mx-36 ">
             <Link
               to={"/"}
               className="m-2 p-1 rounded-lg text-white md:text-xl transition duration-150 hover:bg-indigo-400  bg-indigo-600"

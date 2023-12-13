@@ -97,7 +97,7 @@ useEffect(() => {
               <h1 className="text-5xl font-bold h-32 md:p-5 text-white">
                 Como se hace un tatuaje?
               </h1>
-              <p className="md:m-5  text-white m-10 text-center lg:text-xl md:text-base text-sm p-1 whitespace-normal">
+              <p className="md:m-5  text-white  m-10 text-center lg:text-xl md:text-base text-sm p-1 whitespace-normal">
                 En <span className="text-2xl">Cueva Store</span>, nos apasiona
                 el arte del tatuaje y vamos a guiarte en el
                 emocionante viaje de crear  una obra de
